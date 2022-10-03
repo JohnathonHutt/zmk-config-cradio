@@ -56,7 +56,7 @@
   &kp Q   &kp W   &kp F      &kp P   &kp G   &kp J            &kp L      &kp U    &kp Y     &kp SEMICOLON
   &kp A   &kp R   &kp S      &kp T   &kp D   &kp H            &kp N      &kp E    &kp I             &kp O
   &kp Z   &kp X   &kp C      &kp V   &kp B   &kp K            &kp M  &kp COMMA  &kp DOT  &kp SINGLE_QUOTE
-                         &kp SPACE   &mo 1   &mo 2  &sk RIGHT_SHIFT
+                         &kp SPACE   &kp X   &mo 2  &sk RIGHT_SHIFT
             >;
         };
 
