@@ -76,7 +76,7 @@
             bindings = <
      &kp ESCAPE           &kp TAB         &none         &none   &none     &none            &none        &none          &none        &kp DEL
  &sk LEFT_SHIFT  &sk LEFT_CONTROL  &sk LEFT_ALT  &sk LEFT_GUI   &none  &kp LEFT         &kp DOWN       &kp UP      &kp RIGHT  &kp BACKSPACE
-      &kp ENTER             &none     &prettier      &ws_find   &none  &kp HOME          &kp END  &kp PAGE_UP  &kp PAGE_DOWN          &none
+          &mo 4             &none     &prettier      &ws_find  &reset  &kp HOME          &kp END  &kp PAGE_UP  &kp PAGE_DOWN      &kp ENTER
                                                     &kp SPACE   &mo 1     &mo 3  &sk RIGHT_SHIFT
             >;
         };
@@ -87,6 +87,15 @@
  &sk LEFT_SHIFT  &sk LEFT_CONTROL  &sk LEFT_ALT  &sk LEFT_GUI         &none       &kp F10  &sk RIGHT_GUI  &sk RIGHT_ALT  &sk RIGHT_CONTROL  &sk RIGHT_SHIFT
          &kp F7            &kp F5        &kp F3        &kp F1        &kp F9        &kp F8        &kp F12         &kp F2             &kp F4           &kp F6
                                                        &trans        &trans        &trans         &trans
+            >;
+        };
+
+        Layer__4 {
+            bindings = <
+ &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+ &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+ &trans  &trans  &bootloader  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                              &trans  &trans  &trans  &trans
             >;
         };
     };
