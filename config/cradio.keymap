@@ -76,7 +76,7 @@
             bindings = <
      &kp ESCAPE           &kp TAB         &none         &none   &none     &none            &none        &none          &none        &kp DEL
  &sk LEFT_SHIFT  &sk LEFT_CONTROL  &sk LEFT_ALT  &sk LEFT_GUI   &none  &kp LEFT         &kp DOWN       &kp UP      &kp RIGHT  &kp BACKSPACE
-          &mo 4             &none     &prettier      &ws_find  &reset  &kp HOME          &kp END  &kp PAGE_UP  &kp PAGE_DOWN      &kp ENTER
+          &mo 4             &none         &none         &none  &reset  &kp HOME          &kp END  &kp PAGE_UP  &kp PAGE_DOWN      &kp ENTER
                                                     &kp SPACE   &mo 3     &mo 2  &sk RIGHT_SHIFT
             >;
         };
