@@ -13,43 +13,26 @@
 };
 
 / {
-    combos {
-        compatible = "zmk,combos";
-
-        new_combo {
-            bindings = <&mo 3>;
-            key-positions = <31 32>;
-        };
-
-        new_combo {
-            bindings = <&kp RIGHT_GUI>;
-            key-positions = <28 29>;
-        };
-    };
-
     macros {
         ws_find: ws_find {
             compatible = "zmk,behavior-macro";
-            label = "new_macro";
+            label = "ws_find_macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_press>,
-                <&kp LEFT_SHIFT &kp LEFT_SHIFT>,
-                <&macro_release>;
+                <&macro_tap &kp LEFT_SHIFT &kp LEFT_SHIFT>;
         };
         prettier: prettier {
             compatible = "zmk,behavior-macro";
-            label = "new_macro";
+            label = "prettier_macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_press>,
-                <&kp LEFT_CONTROL &kp LEFT_ALT &kp O>,
-                <&macro_release>,
-                <&macro_press>,
-                <&kp LEFT_COMMAND &kp LEFT_SHIFT &kp LEFT_ALT &kp P>,
-                <&macro_release>;
+                <&macro_press &kp LEFT_CONTROL &kp LEFT_ALT &kp O>,
+                <&macro_release &kp LEFT_CONTROL &kp LEFT_ALT &kp O>,
+                <&macro_press &kp LEFT_COMMAND &kp LEFT_SHIFT &kp LEFT_ALT &kp P>,
+                <&macro_release &kp LEFT_COMMAND &kp LEFT_SHIFT &kp LEFT_ALT &kp P>;
         };
     };
+
 
     keymap {
         compatible = "zmk,keymap";
@@ -76,7 +59,7 @@
             bindings = <
      &kp ESCAPE           &kp TAB         &none         &none   &none     &none            &none        &none          &none        &kp DEL
  &sk LEFT_SHIFT  &sk LEFT_CONTROL  &sk LEFT_ALT  &sk LEFT_GUI   &none  &kp LEFT         &kp DOWN       &kp UP      &kp RIGHT  &kp BACKSPACE
-          &mo 4             &none         &none         &none  &reset  &kp HOME          &kp END  &kp PAGE_UP  &kp PAGE_DOWN      &kp ENTER
+          &mo 4             &none       &prettier       &ws_find  &reset  &kp HOME          &kp END  &kp PAGE_UP  &kp PAGE_DOWN      &kp ENTER
                                                     &kp SPACE   &mo 3     &mo 2  &sk RIGHT_SHIFT
             >;
         };
