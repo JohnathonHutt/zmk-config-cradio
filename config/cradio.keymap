@@ -30,7 +30,59 @@
             then-layer = <3>;
         };
     };
-
+    
+    behaviors {
+        hm_l: homerow_mods_left {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MODS_L";
+            #binding-cells = <2>;
+            tapping-term-ms = <300>;
+            quick-tap-ms = <250>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        hold-trigger-key-positions = <3 4 5 10 11 12 13 14>; // right hand
+        };
+        hm_r: homerow_mods_right {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MODS_R";
+            #binding-cells = <2>;
+            tapping-term-ms = <300>;
+            quick-tap-ms = <250>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        hold-trigger-key-positions = <0 1 2 6 7 8 9>; // left hand
+        };
+        sr: shift_layer {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SHIFT_LAYER";
+            #binding-cells = <2>;
+            tapping-term-ms = <300>;
+            quick_tap_ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&to>;
+        retro-tap;
+        };
+        hl_l: homerow_layers_left {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_LAYERS_L";
+            #binding-cells = <2>;
+            tapping-term-ms = <220>;
+            quick-tap-ms = <250>;
+            flavor = "tap-preferred";
+            bindings = <&mo>, <&kp>;
+        hold-trigger-key-positions = <3 4 5 10 11 12 13 14>; // right hand
+        };
+        hl_r: homerow_layers_right {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_LAYERS_R";
+            #binding-cells = <2>;
+            tapping-term-ms = <220>;
+            quick-tap-ms = <250>;
+            flavor = "tap-preferred";
+            bindings = <&mo>, <&kp>;
+        hold-trigger-key-positions = <0 1 2 6 7 8 9>; // left hand
+        };
+        
     macros {
         ws_find: ws_find {
             compatible = "zmk,behavior-macro";
@@ -62,7 +114,7 @@
         default_layer {
             bindings = <
            &kp Q        &kp W           &kp F               &kp P  &kp B  &kp J            &kp L            &kp U                &kp Y      &kp SEMICOLON
-&mt LEFT_SHIFT A  &mt LCTRL R  &mt LEFT_ALT S  &mt LEFT_COMMAND T  &kp G  &kp M       &mt RCMD N  &mt RIGHT_ALT E  &mt RIGHT_CONTROL I  &mt RIGHT_SHIFT O
+&hm_l LEFT_SHIFT A  &hm_l LCTRL R  &hm_l LEFT_ALT S  &hm_l LEFT_COMMAND T  &kp G  &kp M  &hm_r RCMD N  &hm_r RIGHT_ALT E  &hm_r RIGHT_CONTROL I  &hm_r RIGHT_SHIFT O
            &kp Z        &kp X           &kp C               &kp D  &kp V  &kp K            &kp H        &kp COMMA              &kp DOT   &kp SINGLE_QUOTE
                                                     &mt LC(LS(LALT)) SPC  &mo 1        &mo 2  &sk RIGHT_SHIFT
             >;
