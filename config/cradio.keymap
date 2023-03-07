@@ -15,13 +15,14 @@
 / {
     combos {
         compatible = "zmk,combos";
+
         combo_esc {
             timeout-ms = <100>;
             key-positions = <0 1>;
             bindings = <&kp ESC>;
         };
     };
-        
+
     macros {
         ws_find: ws_find {
             compatible = "zmk,behavior-macro";
@@ -52,46 +53,46 @@
 
         default_layer {
             bindings = <
-            &kp Q        &kp W           &kp F               &kp P   &kp G   &kp J            &kp L            &kp U                &kp Y      &kp SEMICOLON
-    &mt LEFT_SHIFT A  &mt LCTRL R  &mt LEFT_ALT S  &mt LEFT_COMMAND T   &kp D   &kp H    &mt RCMD N  &mt RIGHT_ALT E  &mt RIGHT_CONTROL I  &mt RIGHT_SHIFT O
-            &kp Z        &kp X           &kp C               &kp V   &kp B   &kp K            &kp M        &kp COMMA              &kp DOT   &kp SINGLE_QUOTE
-                                                         &kp SPACE   &mo 1   &mo 2  &sk RIGHT_SHIFT
+           &kp Q        &kp W           &kp F               &kp P  &kp B  &kp J            &kp L            &kp U                &kp Y      &kp SEMICOLON
+&mt LEFT_SHIFT A  &mt LCTRL R  &mt LEFT_ALT S  &mt LEFT_COMMAND T  &kp G  &kp M       &mt RCMD N  &mt RIGHT_ALT E  &mt RIGHT_CONTROL I  &mt RIGHT_SHIFT O
+           &kp Z        &kp X           &kp C               &kp D  &kp V  &kp K            &kp H        &kp COMMA              &kp DOT   &kp SINGLE_QUOTE
+                                                        &kp SPACE  &mo 1  &mo 2  &sk RIGHT_SHIFT
             >;
         };
 
         left_layer {
             bindings = <
-        &kp ESC  &kp LEFT_BRACKET  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS    &kp TILDE  &kp CARET  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp RIGHT_BRACKET        &kp GRAVE
- &kp UNDERSCORE      &kp ASTERISK       &kp EQUAL             &kp MINUS   &kp DOLLAR   &kp HASH          &sk RIGHT_GUI    &sk RIGHT_ALT  &sk RIGHT_CONTROL  &sk RIGHT_SHIFT
-       &kp PIPE          &kp PLUS     &kp AT_SIGN              &kp FSLH  &kp PERCENT  &kp MINUS           &kp QUESTION  &kp EXCLAMATION      &kp BACKSLASH    &kp AMPERSAND
-                                                              &kp SPACE        &mo 1      &mo 3        &sk RIGHT_SHIFT
+       &kp ESC  &kp LEFT_BRACKET  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS    &kp TILDE  &kp CARET  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp RIGHT_BRACKET        &kp GRAVE
+&kp UNDERSCORE      &kp ASTERISK       &kp EQUAL             &kp MINUS   &kp DOLLAR   &kp HASH          &sk RIGHT_GUI    &sk RIGHT_ALT  &sk RIGHT_CONTROL  &sk RIGHT_SHIFT
+      &kp PIPE          &kp PLUS     &kp AT_SIGN              &kp FSLH  &kp PERCENT  &kp MINUS           &kp QUESTION  &kp EXCLAMATION      &kp BACKSLASH    &kp AMPERSAND
+                                                             &kp SPACE        &mo 1      &mo 3        &sk RIGHT_SHIFT
             >;
         };
 
         right_layer {
             bindings = <
-     &kp ESCAPE           &kp TAB         &none         &none   &none     &none            &none        &none          &none        &kp DEL
- &sk LEFT_SHIFT  &sk LEFT_CONTROL  &sk LEFT_ALT  &sk LEFT_GUI   &none  &kp LEFT         &kp DOWN       &kp UP      &kp RIGHT  &kp BACKSPACE
-          &mo 4             &none     &prettier      &ws_find  &reset  &kp HOME          &kp END  &kp PAGE_UP  &kp PAGE_DOWN      &kp ENTER
-                                                    &kp SPACE   &mo 3     &mo 2  &sk RIGHT_SHIFT
+    &kp ESCAPE           &kp TAB         &none         &none   &none     &none            &none        &none          &none        &kp DEL
+&sk LEFT_SHIFT  &sk LEFT_CONTROL  &sk LEFT_ALT  &sk LEFT_GUI   &none  &kp LEFT         &kp DOWN       &kp UP      &kp RIGHT  &kp BACKSPACE
+         &mo 4             &none     &prettier      &ws_find  &reset  &kp HOME          &kp END  &kp PAGE_UP  &kp PAGE_DOWN      &kp ENTER
+                                                   &kp SPACE   &mo 3     &mo 2  &sk RIGHT_SHIFT
             >;
         };
 
         tri_layer {
             bindings = <
-   &kp NUMBER_7      &kp NUMBER_5  &kp NUMBER_3  &kp NUMBER_1  &kp NUMBER_9  &kp NUMBER_8   &kp NUMBER_0   &kp NUMBER_2       &kp NUMBER_4     &kp NUMBER_6
- &sk LEFT_SHIFT  &sk LEFT_CONTROL  &sk LEFT_ALT  &sk LEFT_GUI         &none       &kp F10  &sk RIGHT_GUI  &sk RIGHT_ALT  &sk RIGHT_CONTROL  &sk RIGHT_SHIFT
-         &kp F7            &kp F5        &kp F3        &kp F1        &kp F9        &kp F8        &kp F12         &kp F2             &kp F4           &kp F6
-                                                       &trans        &trans        &trans         &trans
+  &kp NUMBER_7      &kp NUMBER_5  &kp NUMBER_3  &kp NUMBER_1  &kp NUMBER_9  &kp NUMBER_8   &kp NUMBER_0   &kp NUMBER_2       &kp NUMBER_4     &kp NUMBER_6
+&sk LEFT_SHIFT  &sk LEFT_CONTROL  &sk LEFT_ALT  &sk LEFT_GUI         &none       &kp F10  &sk RIGHT_GUI  &sk RIGHT_ALT  &sk RIGHT_CONTROL  &sk RIGHT_SHIFT
+        &kp F7            &kp F5        &kp F3        &kp F1        &kp F9        &kp F8        &kp F12         &kp F2             &kp F4           &kp F6
+                                                      &trans        &trans        &trans         &trans
             >;
         };
 
         Layer__4 {
             bindings = <
- &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
- &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
- &trans  &trans  &bootloader  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                              &trans  &trans  &trans  &trans
+&trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &bootloader  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                             &trans  &trans  &trans  &trans
             >;
         };
     };
