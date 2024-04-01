@@ -27,8 +27,8 @@
         compatible = "zmk,conditional-layers";
 
         tri_layer {
-            if-layers = <1 2>;
-            then-layer = <3>;
+            if-layers = <1 4>;
+            then-layer = <4>;
         };
     };
 
@@ -123,10 +123,19 @@
 
         default_layer {
             bindings = <
-&kp Q               &kp W          &kp F             &kp P                 &ws_prettier  &kp J    &kp L            &kp U              &kp Y                  &kp SEMICOLON
-&hm_l LEFT_SHIFT A  &hm_l LCTRL R  &hm_l LEFT_ALT S  &hm_l LEFT_COMMAND T  &ws_find      &kp M    &hm_r RCMD N     &hm_r RIGHT_ALT E  &hm_r RIGHT_CONTROL I  &hm_r RIGHT_SHIFT O
-&kp Z               &kp X          &kp C             &kp D                 &kp ESC       &kp TAB  &kp H            &kp COMMA          &kp DOT                &kp SINGLE_QUOTE
-                                                     &mt LC(LS(LALT)) SPC  &mo 1         &mo 2    &sk RIGHT_SHIFT
+&kp Q               &kp W                 &kp F             &kp P                 &kp B           &kp J        &kp L                 &kp U                  &kp Y                       &kp SEMICOLON
+&kp A               &kp R                 &kp S             &kp T                 &kp G           &kp M        &kp N                 &kp E                  &kp I                       &kp O
+&hm_l LEFT_SHIFT Z  &hm_l LEFT_CONTROL X  &hm_l LEFT_ALT C  &hm_l LEFT_COMMAND D  &kp V           &kp K        &hm_r LEFT_COMMAND H  &hm_r RIGHT_ALT COMMA  &hm_r RIGHT_CONTROL PERIOD  &hm_r RIGHT_SHIFT SINGLE_QUOTE
+                                                            &lt 1 SPACE           &sk LEFT_SHIFT  &lt 4 ENTER  &lt 4 BACKSPACE
+            >;
+        };
+
+        right_layer {
+            bindings = <
+&kp ESCAPE      &kp TAB           &none         &none         &none         &none     &none     &kp UP_ARROW  &none          &kp DEL
+&sk LEFT_SHIFT  &sk LEFT_CONTROL  &sk LEFT_ALT  &sk LEFT_GUI  &ws_prettier  &ws_find  &kp DOWN  &kp DOWN      &kp RIGHT      &kp BACKSPACE
+&mo 4           &none             &ws_prettier  &ws_find      &reset        &kp HOME  &kp END   &kp PAGE_UP   &kp PAGE_DOWN  &kp ENTER
+                                                &trans        &trans        &trans    &trans
             >;
         };
 
@@ -135,16 +144,7 @@
 &kp ESC         &kp LEFT_BRACKET  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp TILDE    &kp CARET  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp RIGHT_BRACKET  &kp GRAVE
 &kp UNDERSCORE  &kp ASTERISK      &kp EQUAL       &kp MINUS             &kp DOLLAR   &kp HASH   &sk RIGHT_GUI          &sk RIGHT_ALT    &sk RIGHT_CONTROL  &sk RIGHT_SHIFT
 &kp PIPE        &kp PLUS          &kp AT_SIGN     &kp FSLH              &kp PERCENT  &kp MINUS  &kp QUESTION           &kp EXCLAMATION  &kp BACKSLASH      &kp AMPERSAND
-                                                  &mt LC(LS(LALT)) SPC  &mo 1        &mo 2      &sk RIGHT_SHIFT
-            >;
-        };
-
-        right_layer {
-            bindings = <
-&kp ESCAPE      &kp TAB           &none         &none         &none   &none     &none            &none        &none          &kp DEL
-&sk LEFT_SHIFT  &sk LEFT_CONTROL  &sk LEFT_ALT  &sk LEFT_GUI  &none   &kp LEFT  &kp DOWN         &kp UP       &kp RIGHT      &kp BACKSPACE
-&mo 4           &none             &ws_prettier  &ws_find      &reset  &kp HOME  &kp END          &kp PAGE_UP  &kp PAGE_DOWN  &kp ENTER
-                                                &kp SPACE     &mo 1   &mo 2     &sk RIGHT_SHIFT
+                                                  &mt LC(LS(LALT)) SPC  &mo 1        &mo 4      &sk RIGHT_SHIFT
             >;
         };
 
