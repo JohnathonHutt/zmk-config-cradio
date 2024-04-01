@@ -141,9 +141,9 @@
 
         left_layer {
             bindings = <
-&kp ESC         &kp LEFT_BRACKET  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp TILDE    &kp CARET  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp RIGHT_BRACKET  &kp GRAVE
-&kp UNDERSCORE  &kp ASTERISK      &kp EQUAL       &kp MINUS             &kp DOLLAR   &kp HASH   &sk RIGHT_GUI          &sk RIGHT_ALT    &sk RIGHT_CONTROL  &sk RIGHT_SHIFT
-&kp PIPE        &kp PLUS          &kp AT_SIGN     &kp FSLH              &kp PERCENT  &kp MINUS  &kp QUESTION           &kp EXCLAMATION  &kp BACKSLASH      &kp AMPERSAND
+&kp ESC         &kp LEFT_BRACKET  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp TILDE    &kp CARET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp GRAVE
+&kp UNDERSCORE  &kp ASTERISK      &kp EQUAL       &kp MINUS             &kp DOLLAR   &kp HASH   &sk LEFT_BRACE        &sk RIGHT_BRACE        &sk RIGHT_CONTROL  &sk RIGHT_SHIFT
+&kp PIPE        &kp PLUS          &kp AT_SIGN     &kp FSLH              &kp PERCENT  &kp MINUS  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp BACKSLASH      &kp AMPERSAND
                                                   &mt LC(LS(LALT)) SPC  &mo 1        &mo 4      &sk RIGHT_SHIFT
             >;
         };
