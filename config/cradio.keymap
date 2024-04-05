@@ -13,24 +13,9 @@
 };
 
 / {
-    combos {
-        compatible = "zmk,combos";
+    combos { compatible = "zmk,combos"; };
 
-        combo_esc {
-            timeout-ms = <100>;
-            key-positions = <0 1>;
-            bindings = <&kp ESC>;
-        };
-    };
-
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-
-        tri_layer {
-            if-layers = <1 4>;
-            then-layer = <4>;
-        };
-    };
+    conditional_layers { compatible = "zmk,conditional-layers"; };
 
     behaviors {
         hm_l: homerow_mods_left {
