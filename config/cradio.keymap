@@ -125,26 +125,26 @@
             bindings = <
 &kp Q               &kp W                 &kp F             &kp P                 &kp B           &kp J        &kp L                 &kp U                  &kp Y                       &kp SEMICOLON
 &kp A               &kp R                 &kp S             &kp T                 &kp G           &kp M        &kp N                 &kp E                  &kp I                       &kp O
-&hm_l LEFT_SHIFT Z  &hm_l LEFT_CONTROL X  &hm_l LEFT_ALT C  &hm_l LEFT_COMMAND D  &kp V           &kp K        &hm_r LEFT_COMMAND H  &hm_r RIGHT_ALT COMMA  &hm_r RIGHT_CONTROL PERIOD  &hm_r RIGHT_SHIFT SINGLE_QUOTE
-                                                            &lt 1 SPACE           &sk LEFT_SHIFT  &lt 4 ENTER  &lt 4 BACKSPACE
+&hm_l LEFT_SHIFT Z  &hm_l LEFT_CONTROL X  &hm_l LEFT_ALT C  &hm_l LEFT_COMMAND D  &kp V           &kp K        &hm_r LEFT_COMMAND H  &hm_r RIGHT_ALT COMMA  &hm_r RIGHT_CONTROL PERIOD  &hm_r RIGHT_SHIFT SLASH
+                                                            &lt 1 SPACE           &sk LEFT_SHIFT  &lt 2 ENTER  &lt 3 BACKSPACE
             >;
         };
 
-        right_layer {
+        nav {
             bindings = <
-&kp ESCAPE      &kp TAB           &none         &none         &none         &none     &none     &kp UP_ARROW  &none          &kp DEL
-&sk LEFT_SHIFT  &sk LEFT_CONTROL  &sk LEFT_ALT  &sk LEFT_GUI  &ws_prettier  &ws_find  &kp DOWN  &kp DOWN      &kp RIGHT      &kp BACKSPACE
-&mo 4           &none             &ws_prettier  &ws_find      &reset        &kp HOME  &kp END   &kp PAGE_UP   &kp PAGE_DOWN  &kp ENTER
-                                                &trans        &trans        &trans    &trans
+&trans  &trans  &trans    &kp ESCAPE    &trans  &trans  &kp TAB   &kp UP_ARROW  &trans     &trans
+&trans  &trans  &ws_find  &ws_prettier  &trans  &trans  &kp DOWN  &kp DOWN      &kp RIGHT  &trans
+&trans  &trans  &trans    &trans        &trans  &trans  &trans    &trans        &trans     &trans
+                          &trans        &trans  &trans  &trans
             >;
         };
 
-        left_layer {
+        symbols {
             bindings = <
-&kp ESC         &kp LEFT_BRACKET  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp TILDE    &kp CARET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp GRAVE
-&kp UNDERSCORE  &kp ASTERISK      &kp EQUAL       &kp MINUS             &kp DOLLAR   &kp HASH   &sk LEFT_BRACE        &sk RIGHT_BRACE        &sk RIGHT_CONTROL  &sk RIGHT_SHIFT
-&kp PIPE        &kp PLUS          &kp AT_SIGN     &kp FSLH              &kp PERCENT  &kp MINUS  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp BACKSLASH      &kp AMPERSAND
-                                                  &mt LC(LS(LALT)) SPC  &mo 1        &mo 4      &sk RIGHT_SHIFT
+&kp GRAVE  &kp TILDE    &kp ASTERISK  &kp AMPERSAND    &trans  &kp LESS_THAN     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp MINUS         &kp EQUAL
+&kp PIPE   &kp DOLLAR   &kp QUESTION  &kp EXCLAMATION  &trans  &kp GREATER_THAN  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES
+&kp CARET  &kp PERCENT  &kp AT        &kp HASH         &trans  &trans            &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp BACKSLASH     &kp SLASH
+                                      &trans           &trans  &trans            &trans
             >;
         };
 
