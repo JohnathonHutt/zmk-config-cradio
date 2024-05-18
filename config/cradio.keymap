@@ -151,9 +151,10 @@
          AL1 {
          label = "Base";
                         bindings = <
+      &kp ESC   &none   &none   &none   &none                                                 &none   &none   &none   &none  &kp BSPC   
      &kp ESC  &hm_l LCTL L &hm_l LALT G &hm_l LGUI D  &none                                &none   &hm_r RGUI H  &hm_r LALT U  &hm_r RCTL C  &kp BSPC  
      &hl_l NUM A  &hl_l SM2 R  &hl_l SM1 S  &hl_l SYS T  &none                             &none   &hl_r SYS N  &hl_r SM1 E  &hl_r SM2 I  &hl_r NUM O  
-     &kp ESC   &none   &none   &none   &none                                                 &none   &none   &none   &none  &kp BSPC   
+    
      &mt LC(LS(LALT)) SPC  &shrep LSHIFT 0                                                 &caps_alpha2macro  &alpha2macro 
                         >;
                 };
@@ -161,9 +162,10 @@
           AL2 {
           label = "Al2";
                          bindings = <
+      &kp ESC   &none   &none   &none   &none                                 &none   &none   &none   &none  &kp BSPC 
       &kp ESC  &kp V  &kp W   &kp P   &none                                 &none   &kp M   &kp J   &kp F &kp BSPC   
       &kp Q  &kp Z &kp X     &kp B    &none                                 &none   &kp K   &kp SQT &kp Y   &kp DOT  
-      &kp ESC   &none   &none   &none   &none                                 &none   &none   &none   &none  &kp BSPC  
+       
       &sr LSHIFT AL1      &none                                             &none    &sl AL2U  
                          >;
                };
@@ -171,9 +173,10 @@
          SM1 {
          label = "Code";
                         bindings = <
+      &none   &none   &none   &none   &none                                              &none   &none          &none        &none      &none      
      &kp ESC   &kp STAR     &kp LS(N3)  &kp DLLR  &none                                 &none   &kp LS(COMMA)  &kp LS(DOT)  &kp MINUS  &kp BSPC   
      &kp BSLH   &kp GRAVE    &kp TILDE   &kp CARET  &none                               &none   &kp LBKT       &kp RBKT     &kp PIPE   &kp SLASH  
-     &none   &none   &none   &none   &none                                              &none   &none          &none        &none      &none      
+    
      &trans      &trans                                                                 &trans  &trans 
                         >;
                 };
@@ -181,9 +184,10 @@
          SM2 {
          label = "Punct";
                         bindings = <
+      &none   &none   &none   &none   &none                                                 &none   &none   &none   &none  &none 
      &kp ESC    &kp ATSN    &kp QMARK   &prettier    &none                                 &none   &kp LPRN    &kp RPRN  &kp LS(MINUS)  &kp BSPC   
      &kp SEMI    &kp PRCNT   &kp EXCL     &ws_find   &none                                 &none   &kp LBRC    &kp RBRC    &kp AMPS    &kp COLON    
-     &none   &none   &none   &none   &none                                                 &none   &none   &none   &none  &none  
+     
      &trans  &trans                                                                        &trans &trans 
                         >;
                 };
@@ -191,9 +195,10 @@
          NUM {
          label = "Num";
                         bindings = <
+     &none   &none   &none   &none   &none                                                  &none   &none   &none   &none  &none  
      &kp ESC  &hm_l LCTL DOT &hm_l LALT N0   &hm_l LGUI N1  &none                           &none   &hm_r RGUI N2   &hm_r LALT N3    &hm_r RCTL N4  &kp BSPC   
      &td SLASH MINUS   &td STAR PLUS  &kp N5    &kp N6   &none                              &none   &kp N7   &kp N8    &kp N9  &kp EQUAL  
-     &none   &none   &none   &none   &none                                                  &none   &none   &none   &none  &none  
+     
      &sr LSHIFT AL1  &bt BT_CLR_ALL                                                         &bt BT_NXT &kp RGUI 
                         >;
                 };
@@ -201,9 +206,10 @@
          SYS {
          label = "Nav";
                         bindings = <
+     &none   &none   &none   &none   &none                                                    &none   &none   &none   &none  &none  
      &kp ESC &kp ESC &kp LG(LS(LBKT)) &kp LG(LS(RBKT))  &none                                 &none   &mt LG(V) LG(C)  &kp UP    &kp BKSP  &kp BSPC   
      &td LG(GRAVE) TAB   &kp DEL &kp LG(LBKT) &kp LG(RBKT)  &none                              &none   &kp LEFT         &kp DOWN  &kp RIGHT   &kp RET  
-     &none   &none   &none   &none   &none                                                    &none   &none   &none   &none  &none  
+     
      &sr LSHIFT AL1      &kp LALT                                                             &kp LSHIFT  &kp RGUI 
                         >;
                 };
@@ -211,9 +217,10 @@
         AL2U {
         label = "Al2Caps";
                         bindings = <
+     &none   &none   &none   &none   &none                                                 &none   &none   &none   &none  &none  
      &kp ESC  &kp LS(V) &kp LS(W) &kp LS(P)  &none                                         &none   &kp LS(M)   &kp LS(J)    &kp LS(F)   &kp BSPC   
      &kp LS(Q)   &kp LS(Z)   &kp LS(X)   &kp LS(B)   &none                                 &none   &kp LS(K)   &kp DQT      &kp LS(Y)   &kp COMMA  
-     &none   &none   &none   &none   &none                                                 &none   &none   &none   &none  &none  
+     
      &trans  &trans                                                                        &trans &out OUT_TOG 
                         >;
                 };
